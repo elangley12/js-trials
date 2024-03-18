@@ -94,7 +94,19 @@ def truncate(string):
 
 
 def has_balanced_parens(string):
-    pass  # TODO: replace this line with your code
+    
+    parens = 0
+
+    for char in string:
+        if char == "(":
+            parens += 1
+        elif char == ")":
+            parens -= 1
+
+        if parens < 0:
+            return False
+        
+    return parens == 0
 
 
 def compress(string):
