@@ -73,7 +73,13 @@ def snake_to_camel(string):
 
 
 def longest_word_length(words):
-    pass  # TODO: replace this line with your code
+    longest = len(words[0])
+
+    for word in words:
+        if longest < len(word):
+            longest = len(word)
+
+    return longest
 
 
 def truncate(string):
